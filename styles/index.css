@@ -7,8 +7,36 @@
 /* Stop purging. */
 
 /* Write you own custom component styles here */
-.btn-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+.btn-primary {
+  @apply bg-white py-2 px-4 rounded uppercase font-semibold text-center text-theme-grey-900;
+}
+
+.btn-primary:hover {
+   @apply bg-gray-200;
+}
+
+.btn-primary:disabled {
+   @apply bg-white opacity-50 cursor-default;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+input[type=number]:disabled {
+   @apply bg-transparent text-right;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  @apply bg-transparent;
 }
 
 /* Start purging... */
@@ -16,3 +44,13 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+@layer utilities {
+   .overflow-x-scroll::-webkit-scrollbar {
+      display: none;
+  }
+
+  input[type = "radio"]:checked + span {
+     background-color: white;
+     color: #292929;
+  }
+ }
