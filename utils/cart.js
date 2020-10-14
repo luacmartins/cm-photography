@@ -5,18 +5,18 @@ const { Provider } = cart
 
 const getLocalStorage = () => {
    try {
-      return JSON.parse(localStorage.getItem('cart'))
+      return JSON.parse(window.localStorage.getItem('cart'))
    } catch (e) {
       return []
    }
 }
 
 const setLocalStorage = (state) => {
-   localStorage.setItem('cart', JSON.stringify(state))
+   window.localStorage.setItem('cart', JSON.stringify(state))
 }
 
 const CartProvider = ({ children }) => {
-   // const initialState = getLocalStorage()
+   const initialState = getLocalStorage()
 
    const [cartItems, dispatch] = useReducer((state, action) => {
       switch (action.type) {
@@ -54,7 +54,7 @@ const CartProvider = ({ children }) => {
             setLocalStorage(state)
             return state
       }
-   }, [])
+   }, initialState)
 
    return <Provider value={{ cartItems, dispatch }}>{children}</Provider>
 }
