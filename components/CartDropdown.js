@@ -6,7 +6,7 @@ import CartTotal from './CartTotal'
 
 export default function CartDropdown({ isCartOpen, toggleCart }) {
    const { cartItems } = useContext(cart)
-   if (!cartItems) return
+   if (!cartItems) return <div>Loading...</div>
 
    return (
       <div className="flex items-center w-8 sm:relative justify-end">
