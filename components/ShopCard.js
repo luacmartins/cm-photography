@@ -15,7 +15,7 @@ const ShopCard = ({ product: { images, title, price, slug } }) => {
                ))}
             </Carousel>
          </div>
-         <Link href="/">
+         <Link href="/shop/[slug]" as={`/shop/${slug}`}>
             <a className="sm:flex sm:flex-col">
                <div className="mt-1 flex justify-between mx-1">
                   <h3 className="font-semibold">{title}</h3>
