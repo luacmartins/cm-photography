@@ -9,7 +9,7 @@ const links = [
    { href: '/portfolio', label: 'Portfolio' },
 ]
 
-export default function Nav({ setNoScroll }) {
+export default function NavBar({ setNoScroll }) {
    const [isMenuOpen, setIsMenuOpen] = useState(false)
    const [isCartOpen, setIsCartOpen] = useState(false)
 

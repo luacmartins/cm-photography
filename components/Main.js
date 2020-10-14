@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import Nav from './Nav'
+import NavBar from './NavBar'
 
 export default function Main({ children, title, bg = true }) {
    const [noScroll, setNoScroll] = useState(false)
@@ -11,7 +11,7 @@ export default function Main({ children, title, bg = true }) {
             <title>CM Photography - {title}</title>
          </Head>
          <main className={`${bg ? 'bg-theme-grey-900' : ''} ${noScroll ? 'h-0 overflow-y-hidden' : ''} pb-12 min-h-screen sm:flex sm:flex-col text-white`} >
-            <Nav setNoScroll={setNoScroll} />
+            <NavBar setNoScroll={setNoScroll} />
             {children}
          </main>
       </>
