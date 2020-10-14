@@ -10,7 +10,7 @@ export default function Main({ children, title, bg = true }) {
          <Head>
             <title>CM Photography - {title}</title>
          </Head>
-         <main className={`${bg ? 'bg-theme-grey-900' : ''} ${noScroll ? 'h-0 overflow-y-hidden max-h-full' : ''} pb-12 min-h-full sm:flex sm:flex-col text-white`} >
+         <main className={`${bg ? 'bg-theme-grey-900' : ''} ${noScroll ? 'h-0 overflow-y-hidden max-h-screen' : ''} pb-12 min-h-screen sm:flex sm:flex-col text-white`} >
             <NavBar setNoScroll={setNoScroll} />
             {children}
          </main>
