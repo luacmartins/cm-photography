@@ -16,7 +16,7 @@ const setLocalStorage = (state) => {
 }
 
 const CartProvider = ({ children }) => {
-   const initialState = getLocalStorage()
+   // const initialState = getLocalStorage()
 
    const [cartItems, dispatch] = useReducer((state, action) => {
       switch (action.type) {
@@ -54,7 +54,7 @@ const CartProvider = ({ children }) => {
             setLocalStorage(state)
             return state
       }
-   }, initialState)
+   }, [])
 
    return <Provider value={{ cartItems, dispatch }}>{children}</Provider>
 }
