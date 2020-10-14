@@ -20,7 +20,7 @@ const ShopCard = ({ product: { images, title, price, slug } }) => {
                <div className="mt-1 flex justify-between mx-1">
                   <h3 className="font-semibold">{title}</h3>
                   <div>
-                     <span className="font-hairline text-xs text-theme-grey-400">from</span>
+                     <span className="text-sm text-theme-grey-400">from</span>
                      <span className="ml-2 font-semibold">${price}</span>
                   </div>
                </div>

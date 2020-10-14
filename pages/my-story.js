@@ -29,9 +29,8 @@ export default function MyStoryPage() {
             </div>
 
             {/* Main text */}
-            <div className="mt-12 mb-12 lg:mt-8 sm:mt-16 sm:text-lg lg:text-xl lg:w-1/2 sm:px-8 lg:px-16">
-               <p className="font-thin" dangerouslySetInnerHTML={{ __html: data.description }}>
-                  {/* {data.description} */}
+            <div className="my-12 lg:mt-8 sm:mt-16 sm:text-lg lg:text-xl lg:w-1/2 sm:px-8 lg:px-16">
+               <p className="font-thin text-lg" dangerouslySetInnerHTML={{ __html: data.description }}>
                </p>
             </div>
          </div>

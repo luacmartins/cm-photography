@@ -44,7 +44,7 @@ const ProductInfo = ({ product }) => {
          {/* Title, description, labels */}
          <div className="sm:flex sm:justify-between lg:block">
             <h2 className="font-semibold text-lg leading-tight lg:text-2xl">{product.title}</h2>
-            <span className="text-2xs  bg-white text-theme-grey-900 p-1 rounded">Free shipping</span>
+            <span className="text-xs bg-white text-theme-grey-900 p-1 rounded">Free shipping</span>
          </div>
          <p className="mt-4 font-thin leading-tight">{product.description}</p>
 

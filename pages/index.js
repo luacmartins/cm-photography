@@ -14,7 +14,7 @@ export default function HomePage() {
                <Link href="/shop">
                   <a className="btn-primary w-full text-gray-600 hover:bg-gray-200 sm:w-64">Shop</a>
                </Link>
-               <Link href="/my-story">
+               <Link href="/portfolio">
                   <a className="btn-primary w-full mt-2 text-gray-600 hover:bg-gray-200 sm:mt-0 sm:ml-4 sm:w-64">Portfolio</a>
                </Link>
             </div>

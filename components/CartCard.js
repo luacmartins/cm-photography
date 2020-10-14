@@ -46,11 +46,11 @@ export default function CartCard({ product: { title, image: { src, alt }, option
                <h4 className="word-break pr-1">{title}</h4>
                <div className="flex items-baseline">
                   <input value={cartQuantity} onChange={(e) => editQuantity(e.target.value)} onBlur={(e) => handleMinQuantity(e.target.value)} className="bg-theme-grey-800 rounded w-6 h-4 text-center leading-4" type="number" min="1" step="1" disabled={disabled} />
-                  <span className="text-xs font-hairline text-theme-grey-400 mx-1">x</span>
+                  <span className="text-xs text-theme-grey-400 mx-1">x</span>
                   <span>${price}</span>
                </div>
             </div>
-            <div className="text-xs font-hairline text-theme-grey-400 mt-1">
+            <div className="text-xs text-theme-grey-400 mt-1">
                <span>{size}</span>
                <span className="ml-2">{material}</span>
             </div>
