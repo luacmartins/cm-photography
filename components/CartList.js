@@ -10,7 +10,6 @@ const CartList = ({ removeButton, bg, disabled }) => {
    const handleClick = () => {
       router.push('/checkout/track-order')
    }
-
    return (
       <div className="sm:px-0 sm:flex sm:flex-1 sm:overflow-y-hidden">
          <div className="flex flex-col flex-1 pb-4 mb-24 sm:mb-0 sm:max-h-96 sm:overflow-scroll sm:px-2">

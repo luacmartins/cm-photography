@@ -1,12 +1,11 @@
-import { createContext, useReducer } from 'react'
+import { createContext, useReducer, useEffect } from 'react'
 
 const cart = createContext()
 const { Provider } = cart
 
 const getLocalStorage = () => {
    try {
-      const items = JSON.parse(window.localStorage.getItem('cart'))
-      return items ? items : []
+      return JSON.parse(window.localStorage.getItem('cart')) || []
    } catch (e) {
       return []
    }
@@ -17,8 +16,6 @@ const setLocalStorage = (state) => {
 }
 
 const CartProvider = ({ children }) => {
-   const initialState = getLocalStorage()
-
    const [cartItems, dispatch] = useReducer((state, action) => {
       switch (action.type) {
          case 'ADD':
@@ -55,7 +52,12 @@ const CartProvider = ({ children }) => {
             setLocalStorage(state)
             return state
       }
-   }, initialState)
+   }, [])
+
+   useEffect(() => {
+      const initialState = getLocalStorage()
+      initialState.forEach(item => dispatch({ type: 'ADD', item }))
+   }, [])
 
    return <Provider value={{ cartItems, dispatch }}>{children}</Provider>
 }
