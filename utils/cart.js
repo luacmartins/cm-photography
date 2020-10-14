@@ -5,7 +5,8 @@ const { Provider } = cart
 
 const getLocalStorage = () => {
    try {
-      return JSON.parse(window.localStorage.getItem('cart'))
+      const items = JSON.parse(window.localStorage.getItem('cart'))
+      return items ? items : []
    } catch (e) {
       return []
    }
