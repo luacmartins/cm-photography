@@ -5836,6 +5836,13 @@ postcss-values-parser@^2.0.0, postcss-values-parser@^2.0.1:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
+postcss-viewport-height-correction@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-viewport-height-correction/-/postcss-viewport-height-correction-2.0.2.tgz#7991699fe82fba8c33d7d4b2e685265e1ed57459"
+  integrity sha512-tx2ViBmeBOcQ4pBV6DgFdKG3BHr0jnKZsNQTdzsf/yUk9wLU5ZCY1E0evVCVZHLTPtEatNAvX6cFGCcEbmoG9g==
+  dependencies:
+    postcss "^7.0.18"
+
 postcss@7.0.21:
   version "7.0.21"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.21.tgz#06bb07824c19c2021c5d056d5b10c35b989f7e17"
