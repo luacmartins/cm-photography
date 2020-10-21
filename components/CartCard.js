@@ -51,8 +51,8 @@ export default function CartCard({ product: { title, image: { src, alt }, option
                </div>
             </div>
             <div className="text-xs text-theme-grey-400 mt-1">
-               <span>{size}</span>
-               <span className="ml-2">{material}</span>
+               <span>{material}</span>
+               <span className="ml-2">{size}</span>
             </div>
          </div>
       </div>

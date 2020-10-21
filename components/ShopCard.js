@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Carousel from './Carousel'
+import options from '../products/options'
 
-const ShopCard = ({ product: { images, title, price, slug } }) => {
+const ShopCard = ({ product: { images, title, slug } }) => {
    return (
       <div className="flex flex-col h-full w-full lg:opacity-75 lg:hover:opacity-100 transition-all duration-200">
          <div className="rounded overflow-hidden flex-1">
@@ -21,7 +22,7 @@ const ShopCard = ({ product: { images, title, price, slug } }) => {
                   <h3 className="font-semibold">{title}</h3>
                   <div>
                      <span className="text-sm text-theme-grey-400">from</span>
-                     <span className="ml-2 font-semibold">${price}</span>
+                     <span className="ml-2 font-semibold">${options.prices.from}</span>
                   </div>
                </div>
             </a>

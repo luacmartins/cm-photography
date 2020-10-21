@@ -1,7 +1,7 @@
 const SelectButtons = ({ title, content, name, option, setOption }) => {
    return (
       <>
-         <div className="mt-4 font-semibold text-md text-sm lg:mt-6">{title}</div>
+         <div className="mt-4 font-semibold lg:mt-6">{title}</div>
          <div className="mt-2 overflow-x-scroll py-1">
             {content.map((item) => (
                <label key={item} >

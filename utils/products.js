@@ -15,11 +15,7 @@ export const products = [{
    }, {
       src: '/img/product-1-4.jpg',
       alt: "Anse Source D'Argent in the Seychelles"
-   }],
-   sizes: ['10x12"', '12x16"', '16x20"', '20x24"', '24x30"'],
-   materials: ['Canvas', 'Paper', 'Aluminum', 'Framed', 'Poster'],
-   cartQuantity: 2,
-   price: 69
+   }]
 }, {
    id: 2,
    title: 'Deadvlei',
@@ -37,11 +33,7 @@ export const products = [{
    }, {
       src: '/img/product-2-4.jpg',
       alt: 'Deadvlei'
-   }],
-   sizes: ['10x12"', '12x16"', '16x20"', '20x24"', '24x30"'],
-   materials: ['Canvas', 'Paper', 'Aluminum', 'Framed', 'Poster'],
-   cartQuantity: 1,
-   price: 59
+   }]
 }, {
    id: 3,
    title: 'Sunset over the Moai',
@@ -59,11 +51,7 @@ export const products = [{
    }, {
       src: '/img/product-3-4.jpg',
       alt: 'Sunset over Moai'
-   }],
-   sizes: ['10x12"', '12x16"', '16x20"', '20x24"', '24x30"'],
-   materials: ['Canvas', 'Paper', 'Aluminum', 'Framed', 'Poster'],
-   cartQuantity: 1,
-   price: 39
+   }]
 }, {
    id: 4,
    title: 'Peaks of Patagonia',
@@ -81,11 +69,7 @@ export const products = [{
    }, {
       src: '/img/product-4-4.jpg',
       alt: 'Peaks of Patagonia'
-   }],
-   sizes: ['10x12"', '12x16"', '16x20"', '20x24"', '24x30"'],
-   materials: ['Canvas', 'Paper', 'Aluminum', 'Framed', 'Poster'],
-   cartQuantity: 1,
-   price: 59
+   }]
 }, {
    id: 5,
    title: 'Mount Otemanu',
@@ -103,11 +87,7 @@ export const products = [{
    }, {
       src: '/img/product-5-4.jpg',
       alt: 'Mt. Otemanu'
-   }],
-   sizes: ['10x12"', '12x16"', '16x20"', '20x24"', '24x30"'],
-   materials: ['Canvas', 'Paper', 'Aluminum', 'Framed', 'Poster'],
-   cartQuantity: 1,
-   price: 59
+   }]
 }, {
    id: 6,
    title: "Sunset in Mo'orea",
@@ -125,9 +105,5 @@ export const products = [{
    }, {
       src: '/img/product-6-4.jpg',
       alt: 'Sunset in Moorea'
-   }],
-   sizes: ['10x12"', '12x16"', '16x20"', '20x24"', '24x30"'],
-   materials: ['Canvas', 'Paper', 'Aluminum', 'Framed', 'Poster'],
-   cartQuantity: 1,
-   price: 59
+   }]
 }]

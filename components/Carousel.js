@@ -32,7 +32,7 @@ const Carousel = ({ children }) => {
             </div>
 
             {/* Controls */}
-            <div className="hidden lg:group-hover:block">
+            <div className="hidden sm:group-hover:block">
                <button className="absolute left-0 ml-2 bg-white rounded-full opacity-50 hover:opacity-75 p-2" onClick={slideLeft} >
                   <svg className="h-6 p-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451.847 451.847"><path d="M97.141 225.92c0-8.095 3.091-16.192 9.259-22.366L300.689 9.27c12.359-12.359 32.397-12.359 44.751 0 12.354 12.354 12.354 32.388 0 44.748L173.525 225.92l171.903 171.909c12.354 12.354 12.354 32.391 0 44.744-12.354 12.365-32.386 12.365-44.745 0l-194.29-194.281c-6.167-6.177-9.252-14.274-9.252-22.372z" /></svg>
                </button>

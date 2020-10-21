@@ -9,6 +9,8 @@
       "test": "jest --watch"
    },
    "dependencies": {
+      "axios": "^0.20.0",
+      "moment": "^2.29.1",
       "next": "latest",
       "postcss-viewport-height-correction": "^2.0.2",
       "react": "^16.13.1",
