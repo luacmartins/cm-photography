@@ -21,19 +21,32 @@ module.exports = {
          height: {
             32: '8rem',
             64: '16rem',
+            72: '18rem',
+            84: '21rem',
             96: '24rem',
             128: '32rem',
          },
          width: {
+            72: '18rem',
+            84: '21rem',
             96: '24rem'
          },
          inset: {
             'header': '77px'
          },
          maxHeight: {
-            '96': '22rem'
-         }
-      },
+            '96': '22rem',
+            '128': '32rem',
+            '156': '39rem'
+         },
+         minHeight: {
+            '128': '32rem'
+         },
+         inset: {
+            '1/2': '50%',
+            '1/4': '25%'
+         },
+      }
    },
    variants: {
       display: ['responsive', 'hover', 'focus', 'group-hover'],

@@ -2,7 +2,7 @@ import Main from '../../components/Main'
 import ShopCard from '../../components/ShopCard'
 
 // import fake data
-import { products } from '../../utils/products'
+import { products } from '../../products/products'
 
 export default function ShopPage() {
    return (

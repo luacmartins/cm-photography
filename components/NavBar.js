@@ -5,9 +5,8 @@ import CartDropdown from './CartDropdown'
 import SocialLinks from './SocialLinks'
 
 const links = [
-   { href: '/shop', label: 'Shop' },
    { href: '/my-story', label: 'My Story' },
-   { href: '/portfolio', label: 'Portfolio' },
+   { href: '/portfolio-shop', label: 'Portfolio & Shop' },
 ]
 
 export default function NavBar({ setNoScroll }) {

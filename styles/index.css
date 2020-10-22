@@ -48,6 +48,9 @@ input:-webkit-autofill:focus {
    .overflow-x-scroll::-webkit-scrollbar {
       display: none;
   }
+  .hide-scroll-bar::-webkit-scrollbar {
+   display: none;
+}
 
   input[type = "radio"]:checked + span {
      background-color: white;

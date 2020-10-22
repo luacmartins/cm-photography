@@ -4,7 +4,7 @@ import Carousel from '../../components/Carousel'
 import ProductInfo from '../../components/ProductInfo'
 
 // import fake store data
-import { products } from '../../utils/products'
+import { products } from '../../products/products'
 
 export default function SingleStorePage() {
    const path = useRouter().query.slug

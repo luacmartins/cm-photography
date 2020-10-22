@@ -1,7 +1,7 @@
 import moment from 'moment'
 import options from '../../products/options'
 import getOrder from '../../utils/api/getOrder'
-import { products } from '../../utils/products'
+import { products } from '../../products/products'
 
 const handler = async (req, res) => {
    try {
