@@ -27,10 +27,10 @@ const options = {
    backgrounds: {
       landscape: [{
          src: '/rooms/room-blank.jpg',
-         css: 'w-2/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+         css: 'w-2/3 top-50 left-50 transform -translate-x-1/2 -translate-y-1/2'
       }, {
          src: '/rooms/landscape-1.jpg',
-         css: 'w-40 sm:w-72 lg:w-84 mt-6 sm:mt-10 top-0 left-1/2 transform -translate-x-1/2'
+         css: 'w-40 sm:w-72 lg:w-84 mt-6 sm:mt-10 top-0 left-50 transform -translate-x-1/2'
       }, {
          src: '/rooms/landscape-2.jpg',
          css: 'w-40 sm:w-72 lg:w-84 mt-8 sm:mt-16 lg:mt-12 left-1/2 transform -translate-x-1/2'
