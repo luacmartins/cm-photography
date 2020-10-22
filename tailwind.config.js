@@ -32,7 +32,9 @@ module.exports = {
             96: '24rem'
          },
          inset: {
-            'header': '77px'
+            'header': '77px',
+            '1/2': '50%',
+            '1/4': '25%'
          },
          maxHeight: {
             '96': '22rem',
@@ -41,11 +43,7 @@ module.exports = {
          },
          minHeight: {
             '128': '32rem'
-         },
-         inset: {
-            '1/2': '50%',
-            '1/4': '25%'
-         },
+         }
       }
    },
    variants: {
