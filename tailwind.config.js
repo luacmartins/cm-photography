@@ -2,7 +2,7 @@ module.exports = {
    future: {
       removeDeprecatedGapUtilities: true,
    },
-   purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+   purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}', './products/**/*.{js,ts,jsx,tsx}'],
    theme: {
       extend: {
          colors: {
@@ -34,7 +34,7 @@ module.exports = {
          inset: {
             '1/2': '50%',
             '1/4': '25%',
-            'header': '77px'
+            'header': '77px',
          },
          maxHeight: {
             '96': '22rem',
