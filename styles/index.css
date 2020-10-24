@@ -19,6 +19,28 @@
    @apply bg-white opacity-50 cursor-default;
 }
 
+.blur {
+   filter: blur(.5rem);
+   -webkit-filter: blur(.5rem);
+   -moz-filter: blur(.5rem);
+   -o-filter: blur(.5rem);
+   -ms-filter: blur(.5rem);
+
+   transition: filter .3s ease-out;
+}
+
+.active-link:after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 0;
+   border-bottom: 1px solid white;
+   width: 32px;
+   margin: 0 auto -6px auto;
+}
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -27,6 +49,10 @@ input[type=number]::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance:textfield;
+}
+
+.inline-important {
+   display: inline !important;
 }
 
 input[type=number]:disabled {

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState, useEffect, useContext } from 'react'
 import { cart } from '../utils/cart'
 import SelectButtons from './SelectButtons'
@@ -9,6 +10,7 @@ const ProductInfo = ({ product }) => {
    const [material, setMaterial] = useState('Print')
    const [price, setPrice] = useState(options.prices.from)
    const [isMessageActive, setIsMessageActive] = useState(false)
+   const [isItemAdded, setIsItemAdded] = useState(false)
 
    useEffect(() => {
       !material || !size ? setPrice(options.prices.from) : setPrice(options.prices.list[material][size])
@@ -16,8 +18,10 @@ const ProductInfo = ({ product }) => {
 
    const toggleCartMessage = () => {
       setIsMessageActive(true)
+      setIsItemAdded('processing')
       setTimeout(() => {
          setIsMessageActive(false)
+         setIsItemAdded(true)
       }, 1500)
    }
 
@@ -41,7 +45,6 @@ const ProductInfo = ({ product }) => {
          type: 'ADD',
          item
       })
-
       toggleCartMessage()
    }
 
@@ -87,7 +90,10 @@ const ProductInfo = ({ product }) => {
                   <span className="text-3xl">${price}</span>
                   <span className="pt-2 pl-1">.00</span>
                </div>
-               <button onClick={addToCart} className="btn-primary h-10" disabled={!size || !material}>Add to Cart</button>
+               {isItemAdded !== true && <button onClick={addToCart} className={`${isItemAdded === 'processing' && 'animate-pulse'} btn-primary h-10 w-40`} disabled={!size || !material}>Add to Cart</button>}
+               {isItemAdded === true && <Link href='/checkout'>
+                  <a className="btn-primary h-10 w-40">Checkout</a>
+               </Link>}
             </div>
          </div>
 

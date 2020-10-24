@@ -53,7 +53,7 @@ export default function NavBar({ setNoScroll }) {
                   {links.map(({ href, label }) => (
                      <li key={`${href}${label}`} className="px-4 py-2 sm:px-0 sm:py-0">
                         <ActiveLink href={href}>
-                           <a className="no-underline hover:text-gray-400">{label}</a>
+                           <a className="no-underline hover:text-gray-400 px-2 relative">{label}</a>
                         </ActiveLink>
                      </li>
                   ))}

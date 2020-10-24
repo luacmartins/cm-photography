@@ -24,7 +24,7 @@ module.exports = {
             72: '18rem',
             84: '21rem',
             96: '24rem',
-            128: '32rem'
+            128: '32rem',
          },
          width: {
             72: '18rem',
@@ -42,7 +42,12 @@ module.exports = {
             '156': '39rem'
          },
          minHeight: {
+            '59': '14rem',
             '128': '32rem'
+         },
+         padding: {
+            '2/3': '66.6%',
+            '3/2': '150%'
          }
       }
    },
