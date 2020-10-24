@@ -4,6 +4,7 @@ import Main from '../components/Main'
 import getPortfolio from '../utils/getPortfolio'
 import Lightbox from '../components/Lightbox'
 import ShopProduct from '../components/ShopProduct'
+import getViewportHeight from '../utils/getViewportHeight'
 
 // import fake data
 import { products } from '../products/products'
@@ -13,6 +14,7 @@ export default function PortfolioPage({ images }) {
    const [item, setItem] = useState('')
 
    const openLightbox = (item) => {
+      getViewportHeight()
       setIsOpen(true)
       setItem(item)
    }

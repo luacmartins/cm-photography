@@ -1,11 +1,6 @@
 import { useEffect } from 'react'
-import getViewportHeight from '../utils/getViewportHeight'
 
 const Lightbox = ({ setIsOpen, children }) => {
-   useEffect(() => {
-      getViewportHeight()
-   })
-
    const closeLightbox = () => {
       setIsOpen(false)
       document.body.style.overflow = ''
