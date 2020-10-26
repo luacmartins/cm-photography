@@ -16,13 +16,6 @@ export default function PortfolioPage() {
    useResizeImages()
 
    const openLightbox = (item) => {
-      const $lightbox = document.querySelector('.lightbox')
-      $windowWidth = window.innerWidth
-      if ($windowHeight < 640) {
-         $lightbox.style.height = window.innerHeight
-      } else {
-         $lightbox.style.height = ''
-      }
       setIsOpen(true)
       setItem(item)
    }

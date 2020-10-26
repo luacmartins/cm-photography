@@ -14,6 +14,14 @@ const Lightbox = ({ setIsOpen, children }) => {
       document.body.style.overflow = 'hidden'
       document.addEventListener('keydown', (e) => closeOnEscape(e))
 
+      const $lightbox = document.querySelector('.lightbox')
+      const $windowWidth = window.innerWidth
+      if ($windowWidth < 640) {
+         $lightbox.style.height = window.innerHeight
+      } else {
+         $lightbox.style.height = ''
+      }
+
       const cleanUp = () => {
          document.removeEventListener('keydown', closeOnEscape)
          document.body.style.overflow = ''
