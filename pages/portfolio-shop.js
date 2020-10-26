@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import LazyImage from '../components/LazyImage'
 import Main from '../components/Main'
-import getPortfolio from '../utils/getPortfolio'
 import Lightbox from '../components/Lightbox'
 import ShopProduct from '../components/ShopProduct'
 import getViewportHeight from '../utils/getViewportHeight'
@@ -9,7 +8,7 @@ import getViewportHeight from '../utils/getViewportHeight'
 // import fake data
 import { products } from '../products/products'
 
-export default function PortfolioPage({ images }) {
+export default function PortfolioPage() {
    const [isOpen, setIsOpen] = useState(false)
    const [item, setItem] = useState('')
 
@@ -43,13 +42,4 @@ export default function PortfolioPage({ images }) {
          }
       </Main>
    )
-}
-
-export async function getStaticProps() {
-   const images = getPortfolio()
-   return {
-      props: {
-         images
-      }
-   }
 }

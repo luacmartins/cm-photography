@@ -17,7 +17,7 @@ const getViewportHeight = () => {
       handleResize();
       return handleResize;
    }
-   window.addEventListener('resize', setViewportProperty(document.documentElement));
+   window.addEventListener('resize touchmove', setViewportProperty(document.documentElement));
 }
 
 export default getViewportHeight
