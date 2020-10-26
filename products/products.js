@@ -184,7 +184,7 @@ export const products = [{
    id: 14,
    title: "Sunset in Mo'orea",
    slug: 'sunset-moorea',
-   orientation: 'landscape',
+   orientation: 'portrait',
    location: "Mo'orea, French Polynesia",
    description: "Just another sunset in beautiful Mo'orea. Just another sunset in beautiful Mo'orea.",
    image: {

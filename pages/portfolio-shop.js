@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import useResizeImages from '../utils/useResizeImages'
 import LazyImage from '../components/LazyImage'
 import Main from '../components/Main'
 import Lightbox from '../components/Lightbox'
@@ -12,6 +13,8 @@ export default function PortfolioPage() {
    const [isOpen, setIsOpen] = useState(false)
    const [item, setItem] = useState('')
 
+   useResizeImages()
+
    const openLightbox = (item) => {
       getViewportHeight()
       setIsOpen(true)
@@ -23,7 +26,7 @@ export default function PortfolioPage() {
          <div className="px-2 sm:px-4 lg:px-8 mt-6 lg:mt-12">
             <div className="sm:col-count-2 lg:col-count-3 sm:col-gap-2">
                {products.map(item => (
-                  <div className={`rounded overflow-hidden mb-2 cursor-pointer`} key={item.id} onClick={() => openLightbox(item)}>
+                  <div className={`${item.orientation} rounded overflow-hidden mb-2 cursor-pointer`} key={item.id} onClick={() => openLightbox(item)}>
                      <LazyImage
                         lazy={item.image.lazy}
                         imageSrcSet={item.srcset}
