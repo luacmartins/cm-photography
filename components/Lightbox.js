@@ -10,21 +10,22 @@ const Lightbox = ({ setIsOpen, children }) => {
       if (e.keyCode === 27) closeLightbox()
    }
 
-   const cleanUp = () => {
-      document.removeEventListener('keydown', closeOnEscape)
-      document.body.style.overflow = ''
-   }
-
    useEffect(() => {
       document.body.style.overflow = 'hidden'
       document.addEventListener('keydown', (e) => closeOnEscape(e))
+
+      const cleanUp = () => {
+         document.removeEventListener('keydown', closeOnEscape)
+         document.body.style.overflow = ''
+      }
+
       return () => {
          cleanUp()
       }
    }, [])
 
    return (
-      <div className="fixed inset-0 w-screen h-screen z-50">
+      <div className="lightbox fixed inset-0 w-screen h-screen z-50">
          <div className="absolute inset-0 bg-theme-grey-900 lg:max-h-156 z-50 sm:m-12 lg:my-20 lg:mx-28 sm:rounded-lg overflow-hidden">
             {/* Lightbox header */}
             <div className="text-white flex lg:absolute lg:right-0 justify-end border-b lg:border-none border-theme-grey-600">
