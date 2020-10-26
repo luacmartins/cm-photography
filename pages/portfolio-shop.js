@@ -12,10 +12,12 @@ import { products } from '../products/products'
 export default function PortfolioPage() {
    const [isOpen, setIsOpen] = useState(false)
    const [item, setItem] = useState('')
+   const [height, setHeight] = useState(undefined)
 
    useResizeImages()
 
    const openLightbox = (item) => {
+      window.innerWidth < 640 ? setHeight(window.innerHeight) : setHeight(undefined)
       setIsOpen(true)
       setItem(item)
    }
@@ -38,7 +40,7 @@ export default function PortfolioPage() {
             </div>
          </div>
          {
-            isOpen && <Lightbox setIsOpen={setIsOpen} product={item}>
+            isOpen && <Lightbox setIsOpen={setIsOpen} height={height}>
                <ShopProduct product={item} />
             </Lightbox>
          }

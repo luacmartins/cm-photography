@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const Lightbox = ({ setIsOpen, children }) => {
+const Lightbox = ({ setIsOpen, height, children }) => {
    const closeLightbox = () => {
       setIsOpen(false)
       document.body.style.overflow = ''
@@ -14,14 +14,6 @@ const Lightbox = ({ setIsOpen, children }) => {
       document.body.style.overflow = 'hidden'
       document.addEventListener('keydown', (e) => closeOnEscape(e))
 
-      const $lightbox = document.querySelector('.lightbox')
-      const $windowWidth = window.innerWidth
-      if ($windowWidth < 640) {
-         $lightbox.style.height = window.innerHeight
-      } else {
-         $lightbox.style.height = ''
-      }
-
       const cleanUp = () => {
          document.removeEventListener('keydown', closeOnEscape)
          document.body.style.overflow = ''
@@ -31,9 +23,9 @@ const Lightbox = ({ setIsOpen, children }) => {
          cleanUp()
       }
    }, [])
-
+   console.log(height)
    return (
-      <div className="lightbox fixed inset-0 w-screen h-screen z-50">
+      <div style={{ height: height ? height : '' }} className="fixed inset-0 w-screen h-screen z-50">
          <div className="absolute inset-0 bg-theme-grey-900 lg:max-h-156 z-50 sm:m-12 lg:my-20 lg:mx-28 sm:rounded-lg overflow-hidden">
             {/* Lightbox header */}
             <div className="text-white flex lg:absolute lg:right-0 justify-end border-b lg:border-none border-theme-grey-600">
