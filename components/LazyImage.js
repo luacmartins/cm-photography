@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+import LazyLoad from 'react-lazyload'
 
 const LazyImage = ({ lazy, imageSrc, imageSrcSet, sizes, className }) => {
    const [srcSet, setSrcSet] = useState(lazy)
@@ -18,12 +19,14 @@ const LazyImage = ({ lazy, imageSrc, imageSrcSet, sizes, className }) => {
    }, [lazy, imageSrcSet])
 
    return (
-      <img
-         src={src}
-         srcSet={srcSet}
-         sizes={sizes}
-         className={`${className} ${srcSet === lazy ? 'blur' : ''}`}
-      />
+      <LazyLoad once offset={100}>
+         <img
+            src={src}
+            srcSet={srcSet}
+            sizes={sizes}
+            className={`${className} ${srcSet === lazy ? 'blur' : ''}`}
+         />
+      </LazyLoad>
    )
 };
 

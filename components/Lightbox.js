@@ -1,6 +1,12 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
-const Lightbox = ({ setIsOpen, height, children }) => {
+const Lightbox = ({ setIsOpen, children }) => {
+   const [height, setHeight] = useState(undefined)
+
+   const resizeLightbox = () => {
+      window.innerWidth < 640 ? setHeight(window.innerHeight) : setHeight(undefined)
+   }
+
    const closeLightbox = () => {
       setIsOpen(false)
       document.body.style.overflow = ''
@@ -11,11 +17,14 @@ const Lightbox = ({ setIsOpen, height, children }) => {
    }
 
    useEffect(() => {
+      resizeLightbox()
+      document.addEventListener('touchmove', resizeLightbox)
       document.body.style.overflow = 'hidden'
       document.addEventListener('keydown', (e) => closeOnEscape(e))
 
       const cleanUp = () => {
          document.removeEventListener('keydown', closeOnEscape)
+         document.removeEventListener('touchmove', resizeLightbox)
          document.body.style.overflow = ''
       }
 

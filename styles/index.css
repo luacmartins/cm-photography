@@ -19,6 +19,20 @@
    @apply bg-white opacity-50 cursor-default;
 }
 
+.landscape {
+   padding-bottom: 66.6%;
+   -webkit-column-break-inside: avoid;
+   page-break-inside: avoid;
+   break-inside: avoid;
+}
+
+.portrait {
+   padding-bottom: 150%;
+   -webkit-column-break-inside: avoid;
+   page-break-inside: avoid;
+   break-inside: avoid;
+}
+
 .blur {
    filter: blur(.5rem);
    -webkit-filter: blur(.5rem);
