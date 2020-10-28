@@ -23,7 +23,6 @@ const Lightbox = ({ setIsOpen, height, children }) => {
          cleanUp()
       }
    }, [])
-   console.log(height)
    return (
       <div style={{ height: height ? height : '' }} className="fixed inset-0 w-screen h-screen z-50">
          <div className="absolute inset-0 bg-theme-grey-900 lg:max-h-156 z-50 sm:m-12 lg:my-20 lg:mx-28 sm:rounded-lg overflow-hidden">

@@ -7,7 +7,6 @@ const handler = async (req, res) => {
    try {
       // Validate address data
 
-
       // Create new Order ID
       const [orderID, orderCreationError] = await createOrder(req.body.address)
       if (orderCreationError) throw orderCreationError

@@ -9,7 +9,7 @@ const ShopProduct = ({ product }) => {
          <div className="lg:w-3/5 lg:h-128 lg:mx-4 rounded overflow-hidden">
             <Carousel>
                {[
-                  <img key={'img'} className="h-full w-full object-cover" src={product.image.src} alt={product.image.alt} srcSet={product.srcset} sizes={product.sizes} />,
+                  <img key={'img'} className={`${product.orientation === 'portrait' ? 'h-full w-auto mx-auto rounded-lg' : 'h-full w-full'} object-cover`} src={product.image.src} alt={product.image.alt} srcSet={product.srcset} sizes={product.sizes} />,
                   ...options.backgrounds[product.orientation].map((background, i) => (
                      <ImageOverlay
                         key={i}

@@ -6,9 +6,10 @@ const imageminPngquant = require('imagemin-pngquant');
 const imageminJpegtran = require('imagemin-jpegtran');
 
 const createOptimizedImages = () => {
-   const inputDirectory = '/public/portfolio'
+   const inputDirectory = '/public/portfolio-full'
    const outputDirectory = './public/output'
-   const sizes = [{ name: 'desktop', width: 1440 }, { name: 'tablet', width: 720 }, { name: 'mobile', width: 420 }, { name: 'lazy', width: 64 },]
+   // const sizes = [{ name: 'desktop', width: 1440 }, { name: 'tablet', width: 720 }, { name: 'mobile', width: 420 }, { name: 'lazy', width: 64 },]
+   const sizes = [{ name: 'lazy', width: 64 }]
 
    const directory = path.join(process.cwd(), inputDirectory)
    const fileNames = fs.readdirSync(directory).filter(file => file !== '.DS_Store').map(fileName => fileName.split('.jpg')[0])

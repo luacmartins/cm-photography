@@ -4,7 +4,7 @@ import SocialLinks from '../components/SocialLinks'
 
 const data = {
    intro: "My name is Carlos Martins. I'm an Adventurer and Photographer.",
-   description: "I was born and raised in Brazil and my passion for adventure started at an early age. Back then it meant to curiously follow my family around discovering how things worked. My curiosity led me to persue a degree in engineering and later on to taken on the world. <br><br> I picked up my first DSLR a month before embarking on a year-long backpacking trip throughout Southeast Asia. A simple entry level camera and a kit lens, without any accessories forced me to be creative and really explore my skills in my newfound passion. Without noticing, photography had become an integrant part of my life and I've taken it to a new level since then. <br><br> My skills improved and so did the gear behind it and now I am proud to share a piece of my work with you."
+   description: "I was born and raised in Brazil and my passion for adventure started at an early age. When I was a kid, that meant to curiously follow my family around discovering how things worked. Later on, my curiosity led me to pursue a degree in engineering and then take on the world. </br></br>I picked up my first DSLR a month before embarking on a year-long backpacking trip throughout Southeast Asia. A simple entry level camera and a kit lens, without any accessories forced me to be creative and really develop and explore my skills in my newfound passion. Without noticing, photography had become an integrant part of my life and I've taken it to a new level since then. </br></br>My skills improved and so did the gear behind it. Now I shoot using a Canon 6D and the two lenses I carry on me at all times are the Canon 24-105mm f/4 and Sigma 150-600mm f/5-6.3. A Vanguard carbon fiber tripod is also part of my pack.</br></br>Landscapes and wildlife are the subjects of my photographs because to me, they are nature’s art gallery. They display nature’s unmatched raw beauty and photography allows me to capture and share that with others."
 }
 
 export default function MyStoryPage() {
@@ -38,8 +38,8 @@ export default function MyStoryPage() {
             <div className="my-12 lg:mt-8 sm:mt-16 sm:text-lg lg:text-xl lg:w-1/2 sm:px-8 lg:px-16">
                <p className="font-thin text-lg" dangerouslySetInnerHTML={{ __html: data.description }}></p>
                <div className="font-thin text-lg mt-6">
-                  <span>Check out my work at my </span>
-                  <Link href="/portfolio">
+                  <span>I am happy to share that beauty with you on my </span>
+                  <Link href="/portfolio-shop">
                      <a className="font-semibold hover:underline">portfolio page</a>
                   </Link>
                   .
