@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react'
 const Lightbox = ({ setIsOpen, children }) => {
    const [height, setHeight] = useState(undefined)
 
+   // makes lightbox full height on mobile devices 
+   // (CSS 100vh does not compensate for navigation bar on/off 
+   // on mobile as users scroll)
    const resizeLightbox = () => {
       window.innerWidth < 640 ? setHeight(window.innerHeight) : setHeight(undefined)
    }
