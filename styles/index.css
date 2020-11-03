@@ -79,6 +79,18 @@ input:-webkit-autofill:focus {
   @apply bg-transparent;
 }
 
+.StripeElement {
+   border: 1px solid #383838;
+ }
+
+ .StripeElement--focus {
+    border: 1px solid white;
+ }
+ 
+ .StripeElement--invalid {
+   border: 1px solid #e53e3e;
+ }
+
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */

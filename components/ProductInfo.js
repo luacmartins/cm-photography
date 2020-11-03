@@ -20,8 +20,10 @@ const ProductInfo = ({ product }) => {
       setIsMessageActive(true)
       setIsItemAdded('processing')
       setTimeout(() => {
-         setIsMessageActive(false)
          setIsItemAdded(true)
+      }, 500)
+      setTimeout(() => {
+         setIsMessageActive(false)
       }, 1500)
    }
 

@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form'
-import FormInput from './FormInput'
+import Input from './Input'
 
 const FormEmail = ({ step, index, data, setStep, nextStep }) => {
    const { register, handleSubmit, errors } = useForm()
@@ -12,10 +12,10 @@ const FormEmail = ({ step, index, data, setStep, nextStep }) => {
          </div>
          <div>
             {step !== index && data &&
-               < div className="opacity-75 mt-2">{data}</div>}
+               <div className="opacity-75 mt-2">{data}</div>}
             {step === index &&
                <form onSubmit={handleSubmit(nextStep)} className="mt-4 grid lg:col-span-3 gap-y-2">
-                  <FormInput
+                  <Input
                      name='email'
                      placeholder='Email'
                      error={errors.email}

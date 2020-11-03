@@ -9,6 +9,8 @@
       "test": "jest --watch"
    },
    "dependencies": {
+      "@stripe/react-stripe-js": "^1.1.2",
+      "@stripe/stripe-js": "^1.10.0",
       "axios": "^0.20.0",
       "moment": "^2.29.1",
       "next": "latest",
@@ -18,7 +20,8 @@
       "react-hook-form": "^6.8.3",
       "react-lazyload": "^3.1.0",
       "react-swipeable": "^5.5.1",
-      "sharp": "^0.26.2"
+      "sharp": "^0.26.2",
+      "stripe": "^8.119.0"
    },
    "devDependencies": {
       "@babel/core": "^7.11.6",

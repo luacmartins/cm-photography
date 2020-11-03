@@ -7,6 +7,6 @@ const checkValidOrder = (orderID) => fetchApi
       if (!res.data.data.isValid) return [undefined, res.data.data.generalErrors]
       if (res.data.data.photos.some(image => image.errors.length > 0)) return [undefined, 'Some images in your order have errors.']
       return [true, undefined]
-   }).catch(error => Promise.resolve([undefined, error.message]))
+   }).catch(error => Promise.resolve([undefined, 'There was an error validating your order. Please try again later.']))
 
 export default checkValidOrder

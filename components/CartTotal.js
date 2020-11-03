@@ -5,8 +5,8 @@ const CartTotal = ({ children }) => {
    const { cartItems } = useContext(cart)
 
    return (
-      <div className="bg-theme-grey-900 sm:bg-transparent fixed left-0 px-4 sm:sticky w-full bottom-0 pt-2 pb-4 border-t border-theme-grey-800">
-         <div className="flex align-center justify-between text-lg w-full">
+      <div className="bg-theme-grey-900 sm:bg-transparent fixed left-0 px-4 sm:sticky w-full bottom-0 pt-2 pb-2 border-t border-theme-grey-800">
+         <div className="flex align-center justify-between text-lg w-full font-semibold">
             <span>Total</span>
             <span>
                ${cartItems.reduce(

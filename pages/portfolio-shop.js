@@ -1,5 +1,4 @@
 import { useState } from 'react'
-// import LazyImage from '../components/LazyImage'
 import LazyLoad from 'react-lazyload'
 import Main from '../components/Main'
 import Lightbox from '../components/Lightbox'
@@ -23,14 +22,6 @@ export default function PortfolioPage() {
             <div className="col-count-1 sm:col-count-2 lg:col-count-3 sm:col-gap-2">
                {products.map(item => (
                   <div className={`${item.orientation} rounded overflow-hidden mb-2 cursor-pointer h-0 relative`} key={item.id} onClick={() => openLightbox(item)}>
-                     {/* <LazyImage
-                        lazy={item.image.lazy}
-                        imageSrcSet={item.srcset}
-                        imageSrc={item.image.src}
-                        sizes={item.sizes}
-                        className='w-full absolute top-0'
-                        placeholder={item.image.lazy}
-                     /> */}
                      <LazyLoad
                         once
                         offset={100}

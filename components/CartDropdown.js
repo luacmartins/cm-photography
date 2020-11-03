@@ -24,7 +24,7 @@ export default function CartDropdown({ isCartOpen, toggleCart }) {
          </button>
 
          {/* Cart body */}
-         <div className={`${isCartOpen ? 'flex' : 'hidden'} flex-col bg-theme-grey-900 overflow-y-scroll border-t border-theme-grey-800 text-white absolute mt-20 sm:mt-8 inset-0 sm:inset-auto sm:top-0 sm:right-0  sm:w-96 sm:h-96 lg:h-128 sm:rounded-lg z-10`}>
+         <div className={`${isCartOpen ? 'flex' : 'hidden'} flex-col bg-theme-grey-900 overflow-y-scroll border-t border-theme-grey-800 text-white absolute mt-20 sm:mt-8 inset-0 sm:inset-auto sm:top-0 sm:right-0  sm:w-96 sm:max-h-96 lg:max-h-128 sm:rounded-lg z-10`}>
 
             {/* Cart Header */}
             <div className="hidden sm:flex sticky bg-theme-grey-900 top-0 px-2 sm:px-4 py-2 border-b border-theme-grey-800 justify-between">
@@ -43,7 +43,7 @@ export default function CartDropdown({ isCartOpen, toggleCart }) {
             <CartTotal>
                <Link href="/checkout">
                   <a>
-                     <button className="btn-primary block mt-2 w-full" disabled={cartItems.length < 1}>Checkout</button>
+                     <button className="btn-primary block my-2 w-full" disabled={cartItems.length < 1}>Checkout</button>
                   </a>
                </Link>
             </CartTotal>

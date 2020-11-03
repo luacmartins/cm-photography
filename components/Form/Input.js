@@ -1,4 +1,4 @@
-const FormInput = ({ register, error, name, ...props }) => {
+const Input = ({ register, error, name, ...props }) => {
    return (
       <>
          <input
@@ -7,13 +7,12 @@ const FormInput = ({ register, error, name, ...props }) => {
             defaultValue=''
             {...props}
             className={
-               `${error ? 'border-red-600' : 'border-theme-grey-800 focus:border-white'} 
+               `${error ? 'border-red-600 text-red-600' : 'border-theme-grey-800 focus:border-white'} 
                ${props.disabled ? 'bg-theme-grey-600 py-0 px-0 opacity-75' : 'py-1 px-2 bg-theme-grey-800'} 
                 rounded w-full border focus:outline-none placeholder-white placeholder-opacity-25`}
          />
-         {error && <div className="text-red-600 text-xs text-thin leading-snug">{error.message}</div>}
       </>
    );
 }
 
-export default FormInput;
+export default Input;

@@ -53,6 +53,7 @@ module.exports = {
    },
    variants: {
       display: ['responsive', 'hover', 'focus', 'group-hover'],
+      opacity: ['responsive', 'hover', 'focus', 'group-hover', 'disabled'],
       backgroundColor: ['responsive', 'hover', 'focus', 'checked'],
    },
    plugins: [require('tailwindcss-multi-column')()],

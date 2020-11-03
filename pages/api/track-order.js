@@ -7,7 +7,7 @@ const handler = async (req, res) => {
    try {
       // Get Order
       const [orderDetails, orderError] = await getOrder(req.query.orderID)
-      if (orderError) return res.send({ error: 'Sorry! We could not find your order. Please check the confirmation number and try again.' })
+      if (orderError) return res.status(400).json({ message: 'There was a problem fetching your order.' })
 
       const shipments = orderDetails.shippingInfo.shipments
       let delivery
@@ -51,9 +51,9 @@ const handler = async (req, res) => {
             })
          })
       }
-      return res.send({ details });
+      return res.status(200).json({ details });
    } catch (error) {
-      return res.send({ errorMessage: error })
+      return res.status(400).json({ message: error })
    }
 };
 
