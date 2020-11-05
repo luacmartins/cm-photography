@@ -21,7 +21,7 @@ export default function PortfolioPage() {
          <div className="px-2 sm:px-4 lg:px-8 mt-6 lg:mt-12">
             <div className="col-count-1 sm:col-count-2 lg:col-count-3 sm:col-gap-2">
                {products.map(item => (
-                  <div className={`${item.orientation} rounded overflow-hidden mb-2 cursor-pointer h-0 relative`} key={item.id} onClick={() => openLightbox(item)}>
+                  <div className={`${item.orientation} rounded overflow-hidden mb-2 cursor-pointer h-0 relative`} key={item.id} onClick={() => openLightbox(item)} tabIndex="0">
                      <LazyLoad
                         once
                         offset={100}
